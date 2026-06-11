@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manouthkia :3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff69b4">
+</head>
+<body>
+
+<!-- Home -->
+<div id="home" class="screen">
+  <h1> Manouthkia :3 </h1>
+  <div id="friends"></div>
+</div>
+
+<!-- Chat -->
+<div id="chat" class="screen hidden">
+  <button class="backBtn" onclick="goHome()">←</button>
+
+  <div class="chatHeader">
+    <img id="chatPfp" class="chatPfp">
+    <h2 id="chatName"></h2>
+  </div>
+
+  <div id="chatMessage"></div>
+
+  <div class="buttons">
+    <button onclick="showVideo()">🎥</button>
+    <button onclick="openBirthday()">🎂</button>
+    <button onclick="openGallery()">🖼️</button>
+  </div>
+</div>
+
+<!-- Gallery -->
+<div id="gallery" class="screen hidden">
+  <button class="backBtn" onclick="goBackToChat()">✖</button>
+  <h2>Gallery</h2>
+  <div id="galleryImages"></div>
+</div>
+
+<!-- Birthday -->
+<div id="birthday" class="screen hidden">
+  <button class="backBtn" onclick="goBackToChat()">✖</button>
+
+  <div class="letter">
+    <h1>Happy Birthday 🎂</h1>
+    <p id="birthdayText"></p>
+  </div>
+
+  <audio id="bdayAudio" src="assets/bday.mp3" loop></audio>
+</div>
+
+<!-- Video Popup -->
+<div id="videoContainer" class="hidden">
+  <button id="closeVideo" onclick="closeVideo()">✖</button>
+  <video id="videoPlayer" controls></video>
+</div>
+
+<!-- Meow -->
+<audio id="meowSound" src="assets/meow.mp3"></audio>
+<script src="script.js"></script>
+</body>
+</html>
